@@ -26,9 +26,10 @@ github_username:  jekyll
 
 # Build settings
 markdown: kramdown
-theme: minima
+theme: jekyll-theme-awesome
 gems:
   - jekyll-feed
+
 exclude:
   - Gemfile
   - Gemfile.lock
