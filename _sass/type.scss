@@ -1,0 +1,43 @@
+/* ==== Set `margin-bottom` to maintain vertical rhythm ==== */
+h1, h2, h3, h4, h5, h6, p, blockquote, pre, ul, ol, dl, figure, .highlight { 
+	margin-bottom: 1rem; /*16px*/
+}
+
+/* ==== Default ==== */
+body {
+  font: 400 16px/1.5 "Muli", Helvetica, Arial, sans-serif;
+  color: $primary;
+  background-color: #fdfdfd;
+  -webkit-text-size-adjust: 100%;
+  -webkit-font-feature-settings: "kern" 1;
+  -moz-font-feature-settings: "kern" 1;
+  -o-font-feature-settings: "kern" 1;
+  font-feature-settings: "kern" 1;
+  font-kerning: normal;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Bitter", serif;
+ }
+
+/* ==== Lists ==== */
+ul, ol {
+  margin-left: 30px;
+}
+
+li > ul,
+li > ol {
+  margin-bottom: 0;
+}
+
+/* ==== Blockquotes ==== */
+blockquote {
+  color: #828282;
+  border-left: 4px solid #e8e8e8;
+  padding-left: 15px;
+  font-size: 18px;
+  letter-spacing: -1px;
+  font-style: italic; }
+  blockquote > :last-child {
+    margin-bottom: 0; }
+

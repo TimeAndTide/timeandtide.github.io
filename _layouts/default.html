@@ -1,42 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="utf-8">
-		<meta name="author" content="Time & Tide">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<title>{{ page.title }}</title>
-		<link href="https://fonts.googleapis.com/css?family=Bitter:400,700|Muli:400,400i,900" rel="stylesheet">
-		<link rel="stylesheet" type="text/css" media="screen" href="/css/reset.css">
-		<link rel="stylesheet" type="text/css" media="screen" href="/css/main.css">
-		<!--[if IE]>
-			<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-			<style type="text/css">
-			.clear {
-			zoom: 1;
-			display: block;
-			}
-			</style>
-		<![endif]-->
-	</head>
-	<body>
-		<nav>
-    		<ul>
-        		<li><a href="/">Home</a></li>
-	        	<li><a href="/about">About</a></li>
-    		</ul>
-		</nav>
-		<div class="container">
-		
-		<h1>This is the header</h1>
-		<p>This is a paragrapg</p>
-		{% include header.html %}
-		
-		</div>
-		<footer>
-    		<ul>
-        		<li><a href="mailto:hankquinlanhub@gmail.com">email</a></li>
-        		<li><a href="https://github.com/hankquinlan">github.com/hankquinlan</a></li>
-			</ul>
-		</footer>
-	</body>
-</html>	
+  {% include head.html %}
+  <body>
+    <div class="container">
+      <header class="masthead">
+        <h3 class="masthead-title">
+          <a href="{{ site.baseurl }}" title="Home">{{ site.title }}</a>
+        </h3>
+        <small>{{ site.tagline }}</small>
+      </header>
+
+      <hr>
+
+      {{ content }}
+
+      <hr>
+
+      <footer>
+          &copy; {{ site.time | date: '%Y' }}. All rights reserved.
+      </footer>
+    </div>
+  </body>
+</html>

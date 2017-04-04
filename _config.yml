@@ -30,6 +30,9 @@ theme: minima
 gems:
   - jekyll-feed
 
+sass:
+  style: compressed
+
 exclude:
   - Gemfile
   - Gemfile.lock

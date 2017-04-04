@@ -1,65 +1,19 @@
----
-# SCSS. Front matter comment to ensure Jekyll properly reads file.
----
+$primary: #1F487F;
+$primary--light: #2B66B3;
+$primary--dark: #122B4C;
 
-$primary {
-	color: #1F487F;
-}
+$secondary: #FE6847;
+$secondary--light: #FF886E;
+$secondary--dark: #D9593C;
 
-$primary--light {
-	color: #2B66B3;
-}
+$black: #070014;
+$black--light: #2C2933;
+$black--dark: #16141A;
 
-$primary--dark {
-	color: #122B4C;
-}
+$gray: #DBE3E8;
+$gray--light: #EDF0F2;
+$gray--dark: #A7B7C2;
 
-$secondary {
-	color: #FE6847;
-}
-
-$secondary--light {
-	color: #FF886E;
-}
-
-$secondary--dark {
-	color: #D9593C;
-}
-
-$black {
-	color: #070014;
-}
-
-$black--light {
-	color: #2C2933;
-}
-
-$black--dark {
-	color: #16141A;
-}
-
-$gray {
-	color: #DBE3E8;
-}
-
-$gray--light {
-	color: #EDF0F2;
-}
-
-$gray--dark {
-	color: #A7B7C2;
-}
-
-$success {
-	color: #46CAAD;
-}
-
-$warning {
-	color: #F4D35E ;
-}
-
-$danger {
-	color: #EA513C;
-}
-
-
+$success: #46CAAD;
+$warning:#F4D35E;
+$danger: #EA513C;
