@@ -1,26 +1,32 @@
 <!DOCTYPE html>
-	<html>
-		<head>
-			<title>{{ page.title }}</title>
-			<link rel="stylesheet" type="text/css" href="/css/main.css">
-		</head>
-		<body>
-			<nav>
-	    		<ul>
-	        		<li><a href="/">Home</a></li>
-		        	<li><a href="/about">About</a></li>
-	    		</ul>
-			</nav>
-			<div class="container">
-			
-			{{ content }}
-			
-			</div><!-- /.container -->
-			<footer>
-	    		<ul>
-	        		<li><a href="#">email</a></li>
-	        		<li><a href="#">timeandtide</a></li>
-				</ul>
-			</footer>
-		</body>
-	</html>
+<html lang="en">
+  {% include head.html %}
+  <body>
+    <div class="container">
+      <header class="masthead">
+        <h3 class="masthead-title">
+          <a href="{{ site.baseurl }}" title="Home">{{ site.title }}</a>
+        </h3>
+        <small>{{ site.tagline }}</small>
+      </header>
+
+      <hr>
+
+<<<<<<< HEAD
+      <!-- {{ content }} -->
+      {% include header.html %}
+
+      {% include footer.html %}
+      
+=======
+      {{ content }}
+
+      <hr>
+
+      <footer>
+          &copy; {{ site.time | date: '%Y' }}. All rights reserved.
+      </footer>
+>>>>>>> 463add173c5adf845536e2abb716f34e06ca7938
+    </div>
+  </body>
+</html>
