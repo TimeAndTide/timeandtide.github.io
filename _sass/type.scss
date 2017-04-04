@@ -1,24 +1,19 @@
-<<<<<<< HEAD
 /* ====
 Google Fonts Installed
 Bitter: regular 400, regular 400 italic, black 900
 Muli: regular 400, bold 700
 ==== */
-=======
+
 /* ==== Set `margin-bottom` to maintain vertical rhythm ==== */
 h1, h2, h3, h4, h5, h6, p, blockquote, pre, ul, ol, dl, figure, .highlight { 
 	margin-bottom: 1rem; /*16px*/
 }
->>>>>>> 463add173c5adf845536e2abb716f34e06ca7938
 
 /* ==== Default ==== */
 body {
   font: 400 16px/1.5 "Muli", Helvetica, Arial, sans-serif;
-<<<<<<< HEAD
   color: $black--light;
-=======
   color: $primary;
->>>>>>> 463add173c5adf845536e2abb716f34e06ca7938
   background-color: #fdfdfd;
   -webkit-text-size-adjust: 100%;
   -webkit-font-feature-settings: "kern" 1;
@@ -28,7 +23,6 @@ body {
   font-kerning: normal;
 }
 
-<<<<<<< HEAD
 /* ==== Set `margin-bottom` to maintain vertical rhythm ==== */
 h1, h2, h3, h4, h5, h6, p, blockquote, pre, ul, ol, dl, figure, .highlight { 
 	line-height: 1.3;
@@ -69,11 +63,10 @@ h5 {
 h6 {
   font-size: 1rem;
 }
-=======
+
 h1, h2, h3, h4, h5, h6 {
   font-family: "Bitter", serif;
- }
->>>>>>> 463add173c5adf845536e2abb716f34e06ca7938
+}
 
 /* ==== Lists ==== */
 ul, ol {
