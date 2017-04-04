@@ -1,18 +1,24 @@
-/**
- * Reset some basic elements
- */
-body, h1, h2, h3, h4, h5, h6,
-p, blockquote, pre, hr,
-dl, dd, ol, ul, figure {
-  margin: 0;
-  padding: 0; }
+/* ====
+Google Fonts Installed
+Bitter: regular 400, regular 400 italic, black 900
+Muli: regular 400, bold 700
+==== */
 
-/**
- * Basic styling
- */
+/* ==== Helper Classes  ==== */
+* { box-sizing: border-box; }
+*:before, *:after { box-sizing: inherit; }
+.clearfix:after { content: ''; display: block; clear: both; overflow: auto; }
+.float-left { float: left; }
+.float-right { float: right; }
+.content-center { display: block; margin: 0 auto; }
+.houdini { display: none; }
+.no-padding-top { padding-top: 0; }
+.no-padding-bottom { padding-bottom: 0; }
+
+/* ==== Basline Type ==== */
 body {
-  font: 400 16px/1.5 "Helvetica Neue", Helvetica, Arial, sans-serif;
-  color: #111;
+  font: 400 16px/1.5 "Muli", Helvetica, Arial, sans-serif;
+  color: $success;
   background-color: #fdfdfd;
   -webkit-text-size-adjust: 100%;
   -webkit-font-feature-settings: "kern" 1;
@@ -21,34 +27,26 @@ body {
   font-feature-settings: "kern" 1;
   font-kerning: normal; }
 
-/**
- * Set `margin-bottom` to maintain vertical rhythm
- */
+/* ==== Set `margin-bottom` to maintain vertical rhythm ==== */
 h1, h2, h3, h4, h5, h6,
 p, blockquote, pre,
 ul, ol, dl, figure,
 .highlight {
-  margin-bottom: 15px; }
+  margin-bottom: 1rem; } /*16px*/
 
-/**
- * Images
- */
+/* ==== Images ==== */
 img {
   max-width: 100%;
   vertical-align: middle; }
 
-/**
- * Figures
- */
+/* ==== Figures ==== */
 figure > img {
   display: block; }
 
 figcaption {
-  font-size: 14px; }
+  font-size: 0.875rem; } /*14px*/
 
-/**
- * Lists
- */
+/* ==== Lists ==== */
 ul, ol {
   margin-left: 30px; }
 
@@ -56,15 +54,11 @@ li > ul,
 li > ol {
   margin-bottom: 0; }
 
-/**
- * Headings
- */
+/* ==== Headings ==== */
 h1, h2, h3, h4, h5, h6 {
-  font-weight: 400; }
+  font-family: "Bitter", serif;
 
-/**
- * Links
- */
+/* ==== Links ==== */
 a {
   color: #2a7ae2;
   text-decoration: none; }
@@ -74,9 +68,7 @@ a {
     color: #111;
     text-decoration: underline; }
 
-/**
- * Blockquotes
- */
+/* ==== Blockquotes ==== */
 blockquote {
   color: #828282;
   border-left: 4px solid #e8e8e8;
@@ -87,9 +79,7 @@ blockquote {
   blockquote > :last-child {
     margin-bottom: 0; }
 
-/**
- * Code formatting
- */
+/* ==== Code formatting ==== */
 pre,
 code {
   font-size: 15px;
@@ -108,9 +98,7 @@ pre {
     padding-right: 0;
     padding-left: 0; }
 
-/**
- * Wrapper
- */
+/* ==== Wrapper ==== */
 .wrapper {
   max-width: -webkit-calc(800px - (30px * 2));
   max-width: calc(800px - (30px * 2));
@@ -125,26 +113,20 @@ pre {
       padding-right: 15px;
       padding-left: 15px; } }
 
-/**
- * Clearfix
- */
+/* ==== Clearfix ==== */
 .wrapper:after, .footer-col-wrapper:after {
   content: "";
   display: table;
   clear: both; }
 
-/**
- * Icons
- */
+/* ==== Icons ==== */
 .icon > svg {
   display: inline-block;
   vertical-align: middle; }
   .icon > svg path {
     fill: #828282; }
 
-/**
- * Site header
- */
+/* ==== Site header ==== */
 .site-header {
   border-top: 5px solid #424242;
   border-bottom: 1px solid #e8e8e8;
@@ -203,9 +185,7 @@ pre {
         .site-nav .page-link:not(:last-child) {
           margin-right: 0; } }
 
-/**
- * Site footer
- */
+/* ==== Site footer ==== */
 .site-footer {
   border-top: 1px solid #e8e8e8;
   padding: 30px 0; }
@@ -255,9 +235,8 @@ pre {
     float: none;
     width: -webkit-calc(100% - (30px / 2));
     width: calc(100% - (30px / 2)); } }
-/**
- * Page content
- */
+
+/* ==== Page content ==== */
 .page-content {
   padding: 30px 0; }
 
@@ -278,9 +257,8 @@ pre {
   display: block;
   font-size: 24px; }
 
-/**
- * Posts
- */
+
+/* ==== Posts ==== */
 .post-header {
   margin-bottom: 30px; }
 
@@ -310,9 +288,7 @@ pre {
       .post-content h4 {
         font-size: 18px; } }
 
-/**
- * Syntax highlighting styles
- */
+/* ==== Syntax highlighting styles ==== */
 .highlight {
   background: #fff; }
   .highlighter-rouge .highlight {
