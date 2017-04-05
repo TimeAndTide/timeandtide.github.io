@@ -1,0 +1,24 @@
+// Dependencies
+// colors.scss
+
+.btn--primary {
+  display: inline-block;
+  padding: 0 20px;
+  letter-spacing: 1px;
+  line-height: 40px;
+  text-transform: uppercase;  
+  font-weight: 700;
+  color: #fff;
+  background-color: $secondary;
+  border-radius: 2px;
+  box-shadow: 0 3px 0 0 darken($secondary, 20%);
+  -webkit-font-smoothing: subpixel-antialiased;
+  -webkit-transition: all .2s linear;
+  transition: all .2s linear; }
+  .btn--primary:hover {
+    text-decoration: none;
+    color: #fff !important;
+    background-color: lighten($secondary, 10%); }
+  .btn--primary:active {
+    background-color: darken($secondary, 10%);
+    box-shadow: 0 3px 0 0 darken($secondary, 20%); }
