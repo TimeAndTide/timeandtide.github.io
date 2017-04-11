@@ -14,7 +14,7 @@
 
 body {
   min-height: 100vh;
-  background-color: $primary;
+  background-color: #fff;
 }
 
 /* ==== Wrapper ==== */
@@ -40,10 +40,10 @@ body {
 
 /* ==== Icons ==== */
 .icon > svg {
-  display: inline-block;
+  display: inline-table;
   vertical-align: middle; }
   .icon > svg path {
-    fill: #828282; }
+    fill: $primary--dark; }
 
 /* ==== Site header ==== */
 .site-header {
@@ -51,19 +51,23 @@ body {
   top: 0;
   left: 0;
   width: 100vw;
-  min-height: 10vh;
+  padding: 20px 20px 22px 20px;
+  z-index: 1;
   background-color: rgba(255,255,255,0.9);
   box-shadow: 0px 5px 20px 5px rgba(0,0,0,0.2); }
+  .site-header svg {
+    height: 30px; 
+    margin-top: 5px; }
 
 .site-nav {
   float: right; }
   ul {
-  margin: 0;
-  padding: 20px 30px 23px; }
+  margin: 0; }
   ul li {
+    display: inline-table;
     list-style-type: none; }
   .site-nav .page-link {
-    color: #111;
+    color: $secondary;
     line-height: 1.5; }
     .site-nav .page-link:not(:last-child) {
       margin-right: 20px; }
@@ -91,20 +95,17 @@ body {
         .site-nav .page-link:not(:last-child) {
           margin-right: 0; } }
 
-
 /* ==== Site footer ==== */
 .site-footer {
-  position: fixed;
+  position: absolute;
   bottom: 0;
   left: 0;
   height: 80px;
   width: 100vw;
   padding: 2.0625rem 0;
-  font-size: .875rem; // 14px
+  font-size: 1rem; // 16px
   text-align: center;
-  color: rgba(255,255,255,0.9);
-  background-color: lighten( $primary, 10% );
-  box-shadow: 0px 5px 20px 5px rgba(0,0,0,0.2); }
+  color: rgba(255,255,255,0.9); }
 
 .footer-heading {
   font-size: 18px;
@@ -152,6 +153,35 @@ body {
     width: -webkit-calc(100% - (30px / 2));
     width: calc(100% - (30px / 2)); } }
 
+/* ==== Hero content ==== */
+.hero--overlay {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.1); }
+
+.hero {
+  background-image: url(../img/hero-1.jpg);
+  background-position: center;
+  background-size: cover;
+  background-color: #fff;
+  height: 100vh; }
+
+.hero--inner {
+  position: relative;
+  height: 100%;
+  text-align: center;
+  padding-top: 10rem; 
+  z-index: 2; }
+
+.hero--inner h2, .hero--inner p {
+  color: #fff; }
+
+.hero--inner p {
+  font-size: 1.2rem; }
+
 /* ==== Page content ==== */
 .page-content {
   padding: 30px 0; }
@@ -188,7 +218,7 @@ img {
       color: #fff; }
 
 /* ==== Posts ==== */
-.post-header {
+.post-head pageer {
   margin-bottom: 30px; }
 
 .post-title {
@@ -216,5 +246,3 @@ img {
     @media screen and (max-width: 800px) {
       .post-content h4 {
         font-size: 18px; } }
-
-/* ==== New Styles ====*/
