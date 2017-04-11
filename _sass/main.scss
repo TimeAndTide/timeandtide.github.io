@@ -95,17 +95,17 @@ body {
         .site-nav .page-link:not(:last-child) {
           margin-right: 0; } }
 
-
 /* ==== Site footer ==== */
 .site-footer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
   height: 80px;
   width: 100vw;
   padding: 2.0625rem 0;
-  font-size: .875rem; // 14px
+  font-size: 1rem; // 16px
   text-align: center;
-  color: rgba(255,255,255,0.9);
-  background-color: lighten( $primary, 10% );
-  box-shadow: 0px 5px 20px 5px rgba(0,0,0,0.2); }
+  color: rgba(255,255,255,0.9); }
 
 .footer-heading {
   font-size: 18px;
@@ -154,17 +154,33 @@ body {
     width: calc(100% - (30px / 2)); } }
 
 /* ==== Hero content ==== */
+.hero--overlay {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.1); }
+
 .hero {
-  background-image: url(http://andrewborstein.github.io/example-project-site/img/header.jpg);
+  background-image: url(../img/hero-1.jpg);
   background-position: center;
   background-size: cover;
   background-color: #fff;
-  height: 100vh;
-  position: relative; }
+  height: 100vh; }
 
 .hero--inner {
-  padding-top: 150px;
-}
+  position: relative;
+  height: 100%;
+  text-align: center;
+  padding-top: 10rem; 
+  z-index: 2; }
+
+.hero--inner h2, .hero--inner p {
+  color: #fff; }
+
+.hero--inner p {
+  font-size: 1.2rem; }
 
 /* ==== Page content ==== */
 .page-content {
