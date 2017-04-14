@@ -14,8 +14,7 @@
 
 body {
   min-height: 100vh;
-  background-color: #fff;
-}
+  background-color: #fff; }
 
 /* ==== Wrapper ==== */
 .wrapper {
@@ -51,61 +50,99 @@ body {
   top: 0;
   left: 0;
   width: 100vw;
-  padding: 20px 20px 22px 20px;
+  min-height: 80px;
+  padding: 20px;
   z-index: 1;
   background-color: rgba(255,255,255,0.9);
   box-shadow: 0px 5px 20px 5px rgba(0,0,0,0.2); }
   .site-header svg {
-    height: 30px; 
-    margin-top: 5px; }
+    height: 30px; }
+  .site-header .site-name svg {
+      margin-top: 5px; }
+  @media (max-width: 600px) {
+    .site-header { padding: 0 20px; } }
 
 .site-nav {
   float: right; }
-  ul {
-  margin: 0; }
-  ul li {
-    display: inline-table;
-    list-style-type: none; }
-  .site-nav .page-link {
-    color: $secondary;
-    line-height: 1.5; }
-    .site-nav .page-link:not(:last-child) {
+  nav ul {
+  margin: 0;
+  padding-left: 0; }
+  nav ul li {
+    float: left;
+    list-style-type: none;
+    line-height: 1.5;
+    color: $secondary; }
+    nav ul li:not(:last-child) {
       margin-right: 20px; }
-  @media screen and (max-width: 600px) {
-    .site-nav {
-      position: absolute;
-      top: 9px;
-      right: 15px;
-      background-color: #fdfdfd;
-      border: 1px solid #e8e8e8;
-      border-radius: 5px;
-      text-align: right; }
-      .site-nav .menu-icon > svg path {
-          fill: #424242; }
-      .site-nav .trigger {
-        clear: both;
-        display: none; }
-      .site-nav:hover .trigger {
-        display: block;
-        padding-bottom: 5px; }
-      .site-nav .page-link {
-        display: block;
-        padding: 5px 10px;
-        margin-left: 20px; }
-        .site-nav .page-link:not(:last-child) {
-          margin-right: 0; } }
+    nav a.btn--linkedin {
+      display: block;
+      width: 30px;
+      height: 30px;
+      margin-top: 2px; }
+    ul li:not(:last-child) {
+      margin-right: 20px; }
+    ul li svg {
+      margin-top: 2px; }
+  @media (max-width: 600px) {
+    a {
+      display: block;
+      padding: 20px 0; }
+    .site-nav ul li {
+      width: 100%;
+      background: $gray--light;
+      text-align: center;
+      border-bottom: 1px solid $gray--dark;
+      text-decoration: none; }
+      ul li:hover, ul li:active, ul li:focus {
+        background: darken($gray--light, 3%); } }
+
+.mobile {
+  display: none;
+  top: 0;
+  position: fixed;
+  width: 100%; }
+  .mobile div {
+    display: none; }
+  button {
+    position: absolute;
+    top: 21px;
+    right: 25px;
+    border: 0;
+    text-indent: 200%;
+    overflow: hidden;
+    background: #fff url(../img/hamburger.png) center no-repeat;
+    border: 1px solid $gray--dark;
+    border-radius: 3px;
+    background-size: 80%;
+    width: 30px;
+    height: 30px;
+    outline: none;
+    transition: all 400ms ease; }
+    button.expanded {
+      transform: rotate(90deg);
+      background-color: transparent;
+      border: 0; }
+  @media (max-width: 600px) {
+    .mobile {
+      display: block; 
+      left: 0; } }
+
+.desktop {
+  display: block;
+  overflow: hidden; }
+  @media (max-width: 600px) {
+  .desktop {
+    display: none; } }
 
 /* ==== Site footer ==== */
 .site-footer {
-  position: absolute;
-  bottom: 0;
-  left: 0;
   height: 80px;
   width: 100vw;
   padding: 2.0625rem 0;
   font-size: 1rem; // 16px
   text-align: center;
-  color: rgba(255,255,255,0.9); }
+  color: rgba(255,255,255,0.9); 
+  background-color: red; }
 
 .footer-heading {
   font-size: 18px;
@@ -170,10 +207,10 @@ body {
   height: 100vh; }
 
 .hero--inner {
-  position: relative;
-  height: 100%;
+  // position: relative;
+  // height: 100%;
   text-align: center;
-  padding-top: 10rem; 
+  padding-top: 10rem;
   z-index: 2; }
 
 .hero--inner h2, .hero--inner p {
@@ -210,12 +247,7 @@ img {
 
   /* ==== Links ==== */
   a {
-    color: $secondary;
     text-decoration: none; }
-    a:visited {
-      color: #1756a9; }
-    a:hover {
-      color: #fff; }
 
 /* ==== Posts ==== */
 .post-head pageer {
