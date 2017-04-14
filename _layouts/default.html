@@ -5,5 +5,10 @@
     {% include header.html %}
     {% include hero.html %}
     {% include footer.html %}
+    <script type="text/javascript">
+      $('button').click(function() {
+        $(this).toggleClass('.expanded').siblings('div').slideToggle();
+      });
+    </script>
   </body>
 </html>
