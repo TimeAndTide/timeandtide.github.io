@@ -79,11 +79,14 @@ body {
       width: 30px;
       height: 30px;
       margin-top: 2px; }
+    ul li:not(:last-child) {
+      margin-right: 20px; }
+    ul li svg {
+      margin-top: 2px; }
   @media (max-width: 600px) {
     a {
       display: block;
-      padding: 20px 0;
-    }
+      padding: 20px 0; }
     .site-nav ul li {
       width: 100%;
       background: $gray--light;
