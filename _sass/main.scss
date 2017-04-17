@@ -1,5 +1,6 @@
 // Dependencies:
 // color.scss
+// type.scss
 
 /* ==== Helper Classes  ==== */
 * { box-sizing: border-box; }
@@ -14,35 +15,8 @@
 
 body {
   min-height: 100vh;
+  color: $black--light;
   background-color: #fff; }
-
-/* ==== Wrapper ==== */
-.wrapper {
-  max-width: -webkit-calc(800px - (30px * 2));
-  max-width: calc(800px - (30px * 2));
-  margin-right: auto;
-  margin-left: auto;
-  padding-right: 30px;
-  padding-left: 30px; }
-  @media screen and (max-width: 800px) {
-    .wrapper {
-      max-width: -webkit-calc(800px - (30px));
-      max-width: calc(800px - (30px));
-      padding-right: 15px;
-      padding-left: 15px; } }
-
-/* ==== Clearfix ==== */
-.wrapper:after, .footer-col-wrapper:after {
-  content: "";
-  display: table;
-  clear: both; }
-
-/* ==== Icons ==== */
-.icon > svg {
-  display: inline-table;
-  vertical-align: middle; }
-  .icon > svg path {
-    fill: $primary--dark; }
 
 /* ==== Site header ==== */
 .site-header {
@@ -51,10 +25,9 @@ body {
   left: 0;
   width: 100vw;
   min-height: 80px;
-  padding: 20px;
+  padding: 20px 40px;
   z-index: 1;
-  background-color: rgba(255,255,255,0.9);
-  box-shadow: 0px 5px 20px 5px rgba(0,0,0,0.2); }
+  background-color: #fff; }
   .site-header svg {
     height: 30px; }
   .site-header .site-name svg {
@@ -128,8 +101,8 @@ body {
       left: 0; } }
 
 .desktop {
-  display: block;
-  overflow: hidden; }
+  display: block; }
+  // overflow: hidden; 
   @media (max-width: 600px) {
   .desktop {
     display: none; } }
@@ -141,8 +114,7 @@ body {
   padding: 2.0625rem 0;
   font-size: 1rem; // 16px
   text-align: center;
-  color: rgba(255,255,255,0.9); 
-  background-color: red; }
+  background-color: $gray--light }
 
 .footer-heading {
   font-size: 18px;
@@ -190,35 +162,6 @@ body {
     width: -webkit-calc(100% - (30px / 2));
     width: calc(100% - (30px / 2)); } }
 
-/* ==== Hero content ==== */
-.hero--overlay {
-  position: absolute;
-  height: 100%;
-  width: 100%;
-  top: 0;
-  left: 0;
-  background: rgba(0, 0, 0, 0.1); }
-
-.hero {
-  background-image: url(../img/hero-1.jpg);
-  background-position: center;
-  background-size: cover;
-  background-color: #fff;
-  height: 100vh; }
-
-.hero--inner {
-  // position: relative;
-  // height: 100%;
-  text-align: center;
-  padding-top: 10rem;
-  z-index: 2; }
-
-.hero--inner h2, .hero--inner p {
-  color: #fff; }
-
-.hero--inner p {
-  font-size: 1.2rem; }
-
 /* ==== Page content ==== */
 .page-content {
   padding: 30px 0; }
@@ -239,6 +182,13 @@ body {
 .post-link {
   display: block;
   font-size: 24px; }
+
+/* ==== Icons ==== */
+.icon > svg {
+  display: inline-table;
+  vertical-align: middle; }
+  .icon > svg path {
+    fill: $primary--dark; }
 
 /* ==== Images ==== */
 img {
@@ -278,3 +228,85 @@ img {
     @media screen and (max-width: 800px) {
       .post-content h4 {
         font-size: 18px; } }
+
+/* ==== Hero content ==== */
+.hero {
+  position: relative;
+  height: 100vh;
+  text-align: center;
+  // background-position: center;
+  // background-size: cover;
+  background-color: $gray--light; }
+  .hero .column {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%); }
+  .hero .btn--large {
+    margin-top: 2rem;
+  }
+
+// z-index if overlay is used
+.hero--inner {
+  padding-top: 10rem;
+  z-index: 2; }
+
+/* ==== HERO CONTENT > Arrow ==== */
+.arrow {
+  position: absolute;
+  bottom: 1.25rem;
+  left: 50%;
+  margin-left:-20px;
+}
+
+.bounce {
+  -webkit-animation-name: bounce;
+  -moz-animation-name: bounce;
+  -o-animation-name: bounce;
+  animation-name: bounce;
+}
+.animated{-webkit-animation-fill-mode:both;
+-moz-animation-fill-mode:both;
+-ms-animation-fill-mode:both;
+-o-animation-fill-mode:both;
+
+            animation-iteration-count: infinite;
+       -moz-animation-iteration-count: infinite;
+    -webkit-animation-iteration-count: infinite;
+
+animation-fill-mode:both;
+-webkit-animation-duration:2s;
+-moz-animation-duration:2s;
+-ms-animation-duration:2s;
+-o-animation-duration:2s;
+animation-duration:2s;
+}
+
+@-webkit-keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {-webkit-transform: translateY(0);} 40% {-webkit-transform: translateY(-30px);}
+  60% {-webkit-transform: translateY(-15px);}
+}
+
+@-moz-keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {-moz-transform: translateY(0);}
+  40% {-moz-transform: translateY(-30px);}
+  60% {-moz-transform: translateY(-15px);}
+}
+
+@-o-keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {-o-transform: translateY(0);}
+  40% {-o-transform: translateY(-30px);}
+  60% {-o-transform: translateY(-15px);}
+}
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {transform: translateY(0);}
+  40% {transform: translateY(-30px);}
+  60% {transform: translateY(-15px);}
+}
+
+/* ==== SPECIALTIES ==== */
+.specialties .specialty {
+   background-color: #fff;
+   border: 1px solid $gray--light;
+   border-radius: 2px;
+   box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.15); }
+
