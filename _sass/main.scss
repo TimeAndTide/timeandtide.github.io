@@ -8,7 +8,7 @@
 .clearfix:after { content: ''; display: block; clear: both; overflow: auto; }
 .float-left { float: left; }
 .float-right { float: right; }
-.content-center { display: block; margin: 0 auto; }
+.content-center { display: block !important; margin: 0 auto; }
 .houdini { display: none; }
 .no-padding-top { padding-top: 0; }
 .no-padding-bottom { padding-bottom: 0; }
@@ -27,6 +27,7 @@ body {
   min-height: 80px;
   padding: 20px 40px;
   z-index: 1;
+  border-bottom: 1px solid $gray;
   background-color: #fff; }
   .site-header svg {
     height: 30px; }
@@ -114,7 +115,8 @@ body {
   padding: 2.0625rem 0;
   font-size: 1rem; // 16px
   text-align: center;
-  background-color: $gray--light }
+  color: #fff;
+  background-color: $primary--light; }
 
 .footer-heading {
   font-size: 18px;
@@ -230,25 +232,40 @@ img {
         font-size: 18px; } }
 
 /* ==== Hero content ==== */
-.hero {
+.hero--container {
   position: relative;
   height: 100vh;
-  text-align: center;
-  // background-position: center;
-  // background-size: cover;
-  background-color: $gray--light; }
-  .hero .column {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%); }
-  .hero .btn--large {
-    margin-top: 2rem;
-  }
+  background-color: $primary--light;
+  .btn--large {
+    margin-top: 2rem; } }
 
-// z-index if overlay is used
-.hero--inner {
-  padding-top: 10rem;
-  z-index: 2; }
+.hero--content-outer {
+  width: 100%;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  padding: 100px 60px 0;
+  box-sizing: border-box;
+  text-align: center; }
+  @media (max-width: 600px) {
+    .hero--content-outer { 
+      padding-top: 60px; } }
+
+.hero--content-inner {
+  margin-right: auto;
+  margin-left: auto;
+  max-width: 850px; }
+  @media (max-width: 600px) {
+    h2 {
+      font-size: 2rem; }
+    .hero--content-inner .type--large {
+      font-size: 1rem; } }
+
+.hero--content-inner h2 {
+  color: #fff; }
+
+.hero--content-inner p {
+  color: rgba(255,255,255,.9); }
 
 /* ==== HERO CONTENT > Arrow ==== */
 .arrow {
@@ -309,4 +326,3 @@ animation-duration:2s;
    border: 1px solid $gray--light;
    border-radius: 2px;
    box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.15); }
-
