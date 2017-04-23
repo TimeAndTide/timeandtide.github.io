@@ -63,12 +63,17 @@ body {
       padding: 20px 0; }
     .site-nav ul li {
       width: 100%;
-      background: $gray--light;
+      padding: 20px 0;
+      text-decoration: none;
       text-align: center;
+      background: $gray--light;
       border-bottom: 1px solid $gray--dark;
-      text-decoration: none; }
+       }
       ul li:hover, ul li:active, ul li:focus {
-        background: darken($gray--light, 3%); } }
+        background: darken($gray--light, 3%); } 
+      nav a.btn--linkedin {
+        margin: auto;
+        padding: 0; } }
 
 .mobile {
   display: none;
