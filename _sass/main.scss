@@ -82,7 +82,7 @@ body {
     top: 21px;
     right: 25px;
     border: 0;
-    text-indent: 200%;
+    text-indent: 100px;
     overflow: hidden;
     background: #fff url(../img/hamburger.png) center no-repeat;
     border: 1px solid $gray--dark;
@@ -249,7 +249,7 @@ img {
   text-align: center; }
   @media (max-width: 600px) {
     .hero--content-outer { 
-      padding-top: 60px; } }
+      padding: 0 30px; } }
 
 .hero--content-inner {
   margin-right: auto;
@@ -257,7 +257,7 @@ img {
   max-width: 850px; }
   @media (max-width: 600px) {
     h2 {
-      font-size: 2rem; }
+      font-size: 1.75rem; }
     .hero--content-inner .type--large {
       font-size: 1rem; } }
 
