@@ -1,4 +1,6 @@
 _site/
 .sass-cache/
+.asset-cache/
+.versions.conf
 .jekyll-metadata
 time-tide.sublime-workspace

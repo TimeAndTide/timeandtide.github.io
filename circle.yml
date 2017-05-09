@@ -1,0 +1,6 @@
+deployment:
+  prod:
+    branch: master
+    commands:
+      - aws s3 cp --cache-control "max-age=300" _site/index.html s3://timeandtide.software/
+      - aws s3 sync --exclude index.html _site/ s3://timeandtide.software/

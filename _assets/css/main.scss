@@ -70,7 +70,7 @@ body {
       border-bottom: 1px solid $gray--dark;
        }
       ul li:hover, ul li:active, ul li:focus {
-        background: darken($gray--light, 3%); } 
+        background: darken($gray--light, 3%); }
       nav a.btn--linkedin {
         margin: auto;
         padding: 0; } }
@@ -89,7 +89,7 @@ body {
     border: 0;
     text-indent: 100px;
     overflow: hidden;
-    background: #fff url(../img/hamburger.png) center no-repeat;
+    background: #fff url(asset_path("hamburger.png")) center no-repeat;
     border: 1px solid $gray--dark;
     border-radius: 3px;
     background-size: 80%;
@@ -103,12 +103,12 @@ body {
       border: 0; }
   @media (max-width: 600px) {
     .mobile {
-      display: block; 
+      display: block;
       left: 0; } }
 
 .desktop {
   display: block; }
-  // overflow: hidden; 
+  // overflow: hidden;
   @media (max-width: 600px) {
   .desktop {
     display: none; } }
@@ -253,7 +253,7 @@ img {
   box-sizing: border-box;
   text-align: center; }
   @media (max-width: 600px) {
-    .hero--content-outer { 
+    .hero--content-outer {
       padding: 0 30px; } }
 
 .hero--content-inner {
