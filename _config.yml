@@ -21,6 +21,7 @@ exclude:
   - Gemfile.lock
   - "*.sublime-project"
   - vendor
+  - circle.yml
 
 
 assets:
